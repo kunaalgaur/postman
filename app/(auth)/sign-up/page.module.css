@@ -1,0 +1,21 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    height: 100vh;
+    width: 100%;
+    padding: 0 40%;
+}
+
+#heading {
+    font-size: xx-large;
+    font-weight: 600;
+    color: var(--orange);
+}
+
+@media (orientation: portrait) {
+    #container {
+        padding: 10px;
+    }
+}
