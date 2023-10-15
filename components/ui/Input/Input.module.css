@@ -1,0 +1,15 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#input {
+    height: 30px;
+    background: none;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    padding: 0 5px;
+    font-family: var(--roboto);
+}
