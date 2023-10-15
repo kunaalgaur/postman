@@ -1,0 +1,7 @@
+#container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #85858555;
+}
