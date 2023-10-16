@@ -9,16 +9,14 @@ import { add_tab } from '@/redux/reducers/tab-reducer';
 import toast from 'react-hot-toast';
 import { useAddTab } from '@/hooks/tab-hooks';
 import { useGetAllCollection } from '@/hooks/collection-hooks';
-import Collection from '@/components/Collection/Collection';
+import Collection from '@/components/cards/Collection/Collection';
 
 const Leftbar = () => {
     const dispatch = useAppDispatch();
     const userId = localStorage.getItem('userId');
     const user = useGetUser(userId as string);
     const handleAddTab = useAddTab();
-    const collections = useGetAllCollection(
-        localStorage.getItem('userId') as string
-    );
+    const collections = useGetAllCollection(userId as string);
     return (
         <div id={styles.container}>
             <div id={styles.top}>
@@ -39,7 +37,7 @@ const Leftbar = () => {
                         <Collection
                             name={collection.name}
                             key={index}
-                            id={collection._id}
+                            id={collection.id}
                         />
                     );
                 })}
