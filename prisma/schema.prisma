@@ -28,6 +28,7 @@ model Collection {
 }
 
 model Folder {
+  name     String
   id       String @id @default(auto()) @map("_id") @db.ObjectId
   author   User   @relation(fields: [authorId], references: [id])
   authorId String @db.ObjectId
